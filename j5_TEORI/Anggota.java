@@ -1,4 +1,4 @@
-package j5_TEORI;
+package J5_TEORI;
 public class Anggota {
     private String idAnggota;
     private String nama;

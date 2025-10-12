@@ -1,4 +1,4 @@
-package j5_TEORI;
+package J5_TEORI;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

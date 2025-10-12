@@ -1,4 +1,4 @@
-package j5_TEORI;
+package J5_TEORI;
 public class Mahasiswa extends Anggota {
     private String nim;
 
