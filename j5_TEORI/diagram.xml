@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net" modified="2025-10-12T11:26:31.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36" etag="qV8t6Y7o7R-iO7L3k9jE" version="21.7.5" type="diagram">
+  <diagram id="studi_kasus_relasi" name="Relasi Kelas PBO">
+    <mxGraphModel dx="1295" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="2" value="&lt;u&gt;Anggota&lt;/u&gt;&lt;br&gt;--&lt;br&gt;- idAnggota: String&lt;br&gt;- nama: String&lt;br&gt;--&lt;br&gt;+ getInfo()" style="swimlane;fontStyle=4;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="150" height="120" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="3" value="Dosen&lt;br&gt;--&lt;br&gt;- nip: String&lt;br&gt;--&lt;br&gt;+ getInfo()" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="4" value="Mahasiswa&lt;br&gt;--&lt;br&gt;- nim: String&lt;br&gt;--&lt;br&gt;+ getInfo()" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="250" y="350" width="150" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="5" value="" style="endArrow=open;endSize=12;html=1;endFill=0;fontFamily=Helvetica;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="125" y="350" as="sourcePoint"/>
+            <mxPoint x="125" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="6" value="" style="endArrow=open;endSize=12;html=1;endFill=0;fontFamily=Helvetica;strokeWidth=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="325" y="350" as="sourcePoint"/>
+            <mxPoint x="210" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="7" value="Perpustakaan&lt;br&gt;--&lt;br&gt;- daftarBuku: List&amp;lt;Buku&amp;gt;&lt;br&gt;--&lt;br&gt;+ tambahBuku(buku: Buku)&lt;br&gt;+ cariBuku(judul: String): Buku" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="100" width="200" height="130" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="8" value="Buku&lt;br&gt;--&lt;br&gt;- isbn: String&lt;br&gt;- judul: String&lt;br&gt;--&lt;br&gt;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="750" y="100" width="150" height="90" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="9" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="660" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="725" y="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="" style="endArrow=none;html=1;fontFamily=Helvetica;strokeWidth=1;endPoint=oval;endFill=0;endSize=10;startArrow=open;startSize=12;startFill=0;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" edge="1" parent="1" source="7" target="8">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="650" y="150" as="sourcePoint"/>
+            <mxPoint x="750" y="150" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="12" value="Peminjaman&lt;br&gt;--&lt;br&gt;- tglPinjam: Date&lt;br&gt;- tglKembali: Date&lt;br&gt;--&lt;br&gt;+ hitungDenda(tgl: Date): double" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="750" y="350" width="180" height="120" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="13" value="Laporan&lt;br&gt;--&lt;br&gt;--&lt;br&gt;+ generateLaporan(peminjaman: Peminjaman)" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="490" width="200" height="100" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="14" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontFamily=Helvetica;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="700" y="470" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="" style="endArrow=block;endSize=12;html=1;fontFamily=Helvetica;strokeWidth=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="13" target="12">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="550" y="490" as="sourcePoint"/>
+            <mxPoint x="840" y="470" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="550" y="470"/>
+              <mxPoint x="840" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
